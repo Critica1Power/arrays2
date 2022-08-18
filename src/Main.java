@@ -4,10 +4,23 @@ public class Main {
         // Задание 1
         System.out.println("Задание 1");
         int summa = 0;
-        for (int i = 0; i < array1.length; i++) {
-            summa += array1[i];
+        for (int spendingDay : array1) {
+            summa += spendingDay;
         }
         System.out.println("Сумма трат за месяц составила " + summa + " рублей.");
+
+        // Задание 2
+        System.out.println("Задание 2");
+        int min = array1[0];
+        int max = array1[0];
+        for (int i = 1; i < array1.length; i++) {
+            if (min > array1[i]) {
+                min = array1[i];
+            } else if (max < array1[i]) {
+                max = array1[i];
+            }
+        }
+        System.out.println("Минимальная сумма трат за день составила " + min + " рублей. " + "Максимальная сумма трат за день составила " + max + " рублей");
     }
 
     public static int[] generateRandomArray() {
